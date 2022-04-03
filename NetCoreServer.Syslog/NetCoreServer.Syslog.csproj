@@ -4,7 +4,26 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Authors>Maximilian Kenfenheuer</Authors>
+    <Company>Maximilian Kenfenheuer</Company>
+    <Description>.Net Core Syslog Server based on NetCoreServer </Description>
+    <Copyright>(c) Maximilian Kenfenheuer</Copyright>
+    <PackageProjectUrl>https://github.com/mKenfenheuer/NetCoreSyslogServer</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/mKenfenheuer/NetCoreSyslogServer</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>syslog,server,linux,.net,core</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="NetCoreServer" Version="6.2.0" />

@@ -24,7 +24,9 @@ namespace Samples.Syslog.Server
 
         public void OnReceived(EndPoint? remoteEndPoint, byte[] buffer, long offset, long size)
         {
-            Console.WriteLine(System.Text.Encoding.UTF8.GetString(buffer));
+            byte[] data = new byte[size];
+            Array.Copy(buffer, offset, data, 0, size);
+            Console.WriteLine(System.Text.Encoding.UTF8.GetString(data));
         }
     }
 }
